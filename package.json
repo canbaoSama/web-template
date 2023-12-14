@@ -20,6 +20,7 @@
         "unocss": "^0.53.0",
         "vite-plugin-externals": "^0.6.2",
         "vite-plugin-insert-html": "^1.0.1",
+        "vite-plugin-require": "^1.1.14",
         "vite-plugin-static-copy": "^0.13.1",
         "vue": "^3.2.47",
         "vue-router": "^4.1.6"

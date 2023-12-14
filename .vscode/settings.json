@@ -1,0 +1,54 @@
+{
+    "workbench.colorTheme": "One Dark Pro Darker",
+    "eslint.workingDirectories": [],
+    "eslint.codeAction.showDocumentation": {
+        "enable": true
+    },
+    "files.associations": {
+        "*.vue": "vue"
+    },
+    "eslint.validate": ["javascript", "javascriptreact", "html", "vue", "typescript", "jsx", "json"],
+    "eslint.runtime": "",
+    "git.path": "C:/Program Files/Git/bin/git.exe",
+    "git.autofetch": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+        // "source.fixAll": true,
+        // "eslint.autoFixOnSave": true
+    },
+    "explorer.confirmDelete": false,
+    "eslint.debug": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "files.eol": "\n",
+    "explorer.confirmDragAndDrop": false,
+    "files.autoSave": "onFocusChange",
+    "eslint.alwaysShowStatus": true,
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "[javascript]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "editor.formatOnSave": true,
+    "[typescript]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "powermode.enabled": true, //启动
+    "powermode.presets": "flames", // 火花效果
+    "powermode.shake.enabled": false,
+    "powermode.combo.counterEnabled": "hide",
+    "powermode.combo.timerEnabled": "hide",
+    "fauxpilot.maxTokens": 128,
+    "fauxpilot.server": "http://codegen.xwbx.ink:62005/v1/engines",
+    "fauxpilot.suggestionDelay": 200,
+    "liveServer.settings.donotShowInfoMsg": true
+}

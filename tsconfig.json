@@ -29,6 +29,10 @@
         "src/**/*.d.ts",
         "src/**/*.tsx",
         "src/**/*.vue",
-        "src/utils/axios.ts",
+        "src/**/*.js",
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
     ]
 }
