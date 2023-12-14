@@ -2,12 +2,8 @@
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
-            "@/*": [
-                "./src/*"
-            ],
-            "@@/*": [
-                "./src/assets/*"
-            ]
+            "@/*": ["./src/*"],
+            "@@/*": ["./src/assets/*"]
         },
         "target": "esnext",
         "useDefineForClassFields": true,
@@ -18,21 +14,9 @@
         "sourceMap": true,
         "resolveJsonModule": true,
         "esModuleInterop": true,
-        "lib": [
-            "esnext",
-            "dom"
-        ],
-        "noUnusedLocals": true,
+        "lib": ["esnext", "dom"],
+        "noUnusedLocals": true
     },
-    "include": [
-        "src/**/*.ts",
-        "src/**/*.d.ts",
-        "src/**/*.tsx",
-        "src/**/*.vue",
-        "src/**/*.js",
-    ],
-    "exclude": [
-        "node_modules",
-        "dist",
-    ]
+    "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/**/*.js", "*.json"],
+    "exclude": ["node_modules", "dist", "*.md"]
 }

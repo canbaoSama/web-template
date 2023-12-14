@@ -28,6 +28,7 @@
     },
     "editor.tabSize": 4,
     "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
     "[javascript]": {
         "editor.tabSize": 4,
         "editor.insertSpaces": true,
@@ -41,6 +42,9 @@
     },
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
     },
     "powermode.enabled": true, //启动
     "powermode.presets": "flames", // 火花效果

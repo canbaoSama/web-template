@@ -14,6 +14,7 @@ module.exports = {
         'no-empty-function': 'off',
         'no-undefined': 'off',
         '@typescript-eslint/indent': ['error', 4, { SwitchCase: 1 }],
+        'jsonc/indent': ['error', 4, {}],
         'vue/html-indent': ['error', 4, { baseIndent: 1, alignAttributesVertically: false }],
         'vue/first-attribute-linebreak': [
             'error',
