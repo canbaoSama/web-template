@@ -36,12 +36,12 @@ const reqList: Array<string | undefined> = []
  */
 const stopRepeatRequest = function (url: string | undefined, cancel: Canceler, errorMessage: string) {
     const errorMsg = errorMessage || AXIOS_CONFIG.REPEAT_MSG
-    for (let i = 0; i < reqList.length; i++) {
+    for (let i = 0; i < reqList.length; i++)
         if (reqList[i] === url) {
             cancel(errorMsg)
             return
         }
-    }
+
     reqList.push(url)
 }
 
@@ -51,12 +51,11 @@ const stopRepeatRequest = function (url: string | undefined, cancel: Canceler, e
    * @param {string} url 请求地址
    */
 const allowRequest = function (url: string | undefined) {
-    for (let i = 0; i < reqList.length; i++) {
+    for (let i = 0; i < reqList.length; i++)
         if (reqList[i] === url) {
             reqList.splice(i, 1)
             break
         }
-    }
 }
 
 // 增加延迟，相同请求不得在短时间内重复发送
@@ -106,9 +105,8 @@ service.interceptors.response.use(
             error.code = res?.code
             return Promise.reject(error)
         }
-        else {
+        else
             return res
-        }
     },
     (error) => {
         delayStartRequest(error)

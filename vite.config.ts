@@ -1,4 +1,4 @@
-import path from 'node:path'
+import path, { resolve } from 'node:path'
 
 import UnoCSS from 'unocss/vite'
 
@@ -37,8 +37,8 @@ export default defineConfig(() => {
         ],
         resolve: { // 配置系统别名，打包后vite无法正确打包通过别名引用的文件，UI库中的Image组件使用别名也无法加载图片，需要其他配置，文件引入方式具体可查看READNE.md
             alias: [
-                { find: '@', replacement: '/src' },
-                { find: '@@', replacement: '/src/assets' },
+                { find: '@', replacement: resolve(__dirname, './src') },
+                { find: '@@', replacement: resolve(__dirname, './src/assets') },
             ],
         },
         css: {
@@ -56,11 +56,11 @@ export default defineConfig(() => {
             compress: true,
             proxy: {
                 '/api': {
-                    target: 'http://192.168.3.107',
+                    target: 'http://192.168.1.108', // 改成自己后端ip地址
 
                 },
                 '/images': {
-                    target: 'http://192.168.3.107/map/images',
+                    target: 'http://192.168.1.108/map/images', // 改成自己的图片ip地址
                     changeOrigin: true,
                     rewrite: path => path.replace(/^\/images/, '/map/images'),
                 },

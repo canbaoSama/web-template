@@ -14,7 +14,7 @@ export const routes: Array<RouteRecordRaw> = [
         component: () => import('@/pages/home.vue'),
         meta: {
             navigation: '首页',
-            unlogin: true,
+            unlogin: false,
         },
     },
     {
@@ -36,15 +36,15 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
     const userstore = useUserStore()
-    // if (userstore.userInfo.token || to.meta.unlogin) {
-    //     next()
-    // }
-    // else {
-    //     next({
-    //         path: '/login',
-    //         query: { redirect: to.fullPath },
-    //     })
-    // }
+    if (userstore.userInfo.token || to.meta.unlogin)
+        next()
+
+    else
+        next({
+            path: '/login',
+            query: { redirect: to.fullPath },
+        })
+
     next()
 })
 

@@ -46,7 +46,7 @@
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "powermode.enabled": true, //启动
+    "powermode.enabled": true, // 启动
     "powermode.presets": "flames", // 火花效果
     "powermode.shake.enabled": false,
     "powermode.combo.counterEnabled": "hide",
