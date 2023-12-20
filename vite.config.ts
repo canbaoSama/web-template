@@ -60,7 +60,7 @@ export default defineConfig(() => {
 
                 },
                 '/images': {
-                    target: 'http://192.168.1.108/map/images', // 改成自己的图片ip地址
+                    target: 'http://192.168.1.108', // 改成自己的图片ip地址
                     changeOrigin: true,
                     rewrite: path => path.replace(/^\/images/, '/map/images'),
                 },
