@@ -24,7 +24,7 @@
     "files.autoSave": "onFocusChange",
     "eslint.alwaysShowStatus": true,
     "[vue]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "Vue.volar"
     },
     "editor.tabSize": 4,
     "editor.insertSpaces": true,
