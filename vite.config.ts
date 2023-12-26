@@ -68,6 +68,7 @@ export default defineConfig(() => {
         },
         build: {
             sourcemap: process.env.NODE_ENV !== 'production', // 在开发环境默认启用了 Source Map 以便更容易调试,在生产环境关闭 Source Map 以减小构建体积
+            minify: 'terser',
             terserOptions: {
                 compress: {
                     drop_console: true,

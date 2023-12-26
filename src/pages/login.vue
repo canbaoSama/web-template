@@ -5,12 +5,13 @@ import type { FormInstance, FormRules } from 'element-plus'
 import { ElMessage } from 'element-plus'
 
 import type { LoginForm } from '@/types/login'
-import { request } from '@/utils/axios'
-import { api } from '@/api/index'
 
-import { useUserStore } from '@/store/user'
+// import { request } from '@/utils/axios'
+// import { api } from '@/api/index'
 
-const userStore = useUserStore()
+// import { useUserStore } from '@/store/user'
+
+// const userStore = useUserStore()
 
 const rules = reactive<FormRules>({
     userName: [{ required: true, message: '请输入用户名', trigger: 'blur' }],
@@ -24,9 +25,10 @@ const loginData = ref<LoginForm>({
 })
 
 async function passwdLogin() {
-    await formRef.value?.validate()
-    const res = await request(api.passwdLogin, loginData.value, { method: 'post' })
-    userStore.saveUserInfo(res?.data)
+    // await formRef.value?.validate()
+    // const res = await request(api.passwdLogin, loginData.value, { method: 'post' })
+    // userStore.saveUserInfo(res?.data)
+
     ElMessage.success('登录成功，正在跳转中...')
 }
 
@@ -40,7 +42,8 @@ function resetForm() {
 </script>
 
 <template>
-    <div class="absolute-full flex-center-center bg-img-cover shadow-blue-12" style="background-image: url('src/assets/images/login_bg.png')">
+    <div class="absolute-full flex-center-center bg-img-cover shadow-blue-12"
+        style="background-image: url('src/assets/images/login_bg.png')">
         <ElForm ref="formRef" :model="loginData" class="w-80 pt-8 px-6 pb-6" :rules="rules">
             <ElFormItem prop="userName">
                 <ElInput v-model="loginData.userName" placeholder="用户名">
@@ -61,9 +64,12 @@ function resetForm() {
                 </ElInput>
             </ElFormItem>
             <ElFormItem class="flex-center-center">
-                <ElButton type="primary" @click="passwdLogin">
-                    登录
-                </ElButton>
+                <RouterLink to="home">
+                    <ElButton type="primary" @click="passwdLogin">
+                        登录
+                    </ElButton>
+                </RouterLink>
+
                 <ElButton type="default" @click="resetForm">
                     重置
                 </ElButton>

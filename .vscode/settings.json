@@ -12,9 +12,7 @@
     "git.path": "C:/Program Files/Git/bin/git.exe",
     "git.autofetch": true,
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-        // "source.fixAll": true,
-        // "eslint.autoFixOnSave": true
+        "source.fixAll.eslint": "explicit"
     },
     "explorer.confirmDelete": false,
     "eslint.debug": true,

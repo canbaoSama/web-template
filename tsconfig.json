@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "baseUrl": ".",
+        "baseUrl": "./",
         "paths": {
             "@/*": [
                 "./src/*"
@@ -22,7 +22,10 @@
             "esnext",
             "dom"
         ],
-        "noUnusedLocals": true
+        "noUnusedLocals": true,
+        "types": [
+            "vite/client"
+        ]
     },
     "include": [
         "src/**/*.ts",
